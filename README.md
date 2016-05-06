@@ -283,7 +283,7 @@ ________________________________________________
 [12](http://bitcoin.stackexchange.com/questions/2025/what-is-txins-sequence): Bitcoin stackexchange - what is transaction sequence order
 
 [13](http://peerassets.github.io/P2TH/): Hans Robeers, Pay-to-TagHash (P2TH): Tagging blockchain
-transactions for eficient queryabilitity, 2016
+transactions for efficient queryabilitity, 2016
 
 [14](https://github.com/ppcoin/ppcoin/blob/master/src/kernel.cpp): Peercoin source code - coin age
 
