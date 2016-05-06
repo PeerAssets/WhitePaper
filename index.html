@@ -245,9 +245,9 @@ Final balance of the issuing address always represents negative balance equal to
 
 <blockquote>
 <p>Alice and everyone else on the network can now see that Bob has issued an asset with specific name, quantity and other metadata. It is verifiable that Bob owns full quantity of "yellow rabbit" asset. Alice wants to trade with Bob for specific quantity of the asset, and Bob agrees to trade so he can send Alice some of his assets. Bob now writes the message, with attached metadata stating quantity of the asset being transferred and transaction ID of transaction when that assets deck was spawned (asset ID).</p>
+</blockquote>
 
 <p><img src="http://i.imgur.com/FtjEmsT.png" alt="bob_transfers_a_card_to_alice"></p>
-</blockquote>
 
 <p><sub>Figure 3. Bob transfers a card to Alice</sub></p>
 
@@ -284,9 +284,7 @@ The asset ID of "marble" asset is publicly known, as it was publicly published b
 
 <p>Next step is to verify that David owns "marble" asset. Alice does this by verifying <em>proof-of-timeline</em> for David's address and asset ID. By knowing transaction ID of this deck's spawning transaction, Alice knows where to start traversing. Alice starts traversing from block height of 223400 until the current block height.</p>
 
-<blockquote>
 <p><img src="http://i.imgur.com/Mce0jek.png" alt="alice_traverses_the_blockchain"></p>
-</blockquote>
 
 <p><sub>Figure 4. Alice traverses the blockchain</sub></p>
 
