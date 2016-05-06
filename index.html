@@ -53,21 +53,21 @@
 
 <p>The following paper describes a simple, blockchain agnostic protocol which enables peers to issue and transact with assets. A simple explanation on how PeerAssets protocol works would be that it works by writing and reading messages on the blockchain, where messages represent assets and addresses represent peers. PeerAsset protocol based assets can be utilized to represent any type of asset like bonds or equity. PeerAssets can also represent real life objects, and by doing so confirm their existence on the blockchain. PeerAssets is a <em>light</em> protocol, as it utilizes no extra layers over the underlying blockchain. It does not require external value tokens beside the blockchain's native currency, which is used to pay transaction fees. PeerAssets does not participate in organizing nor maintaining of the public ledger, but takes advantage of its stability and trustworthiness. PeerAssets can work on top of every cryptocurrency that is forked from Bitcoin and has kept a compatible codebase, which includes Peercoin, Litecoin and alike.</p>
 
-<p>PeerAssets require no hard nor soft fork of the host network, but it requires development of PeerAssets aware client. PeerAssets is also inspired by the original idea of "Colored Coins" and uses OP_RETURN to write data on the blockchain, but offers some optimizations to reduce amount of data written in the OP_RETURN and enables easy querying of the blockchain for relevant transactions with some extra features like shareholder voting and dividends payouts.</p>
+<p>PeerAssets require no hard nor soft fork of the host network, but it requires development of PeerAssets aware client. PeerAssets is also inspired by the original idea of "Colored Coins" and uses OP_RETURN to write data on the blockchain, but offers some optimizations to reduce amount of data written in the OP_RETURN. PeerAssets enables easy querying of the blockchain for relevant transactions and offers some extra features like shareholder voting and dividends payouts.</p>
 
 <h1>
 <a id="protocol-overview" class="anchor" href="#protocol-overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Protocol overview</h1>
 
 <p>The PeerAssets protocol uses the blockchain to distribute messages and store them permanently. PeerAsset messages are written as metadata attached to transactions, which inseparably tie them to: sending address, transaction ID and block height. Issuing an asset is equal to writing a properly formatted message, then signing it with your unique signature and sticking it on the public bulletin board. After doing that, the entire network will know that you have issued this new asset, which can represent some real object or company stock. The transaction ID of the transaction that posted this message to the blockchain is now considered an asset ID. When you want to send a specific quantity of an asset to another peer, you just write another message stating that you (the issuer) transfer some quantity of the asset to a new owner and sign the message with your unique signature. Now everyone interested can see that you have given up control of said amount of the asset and transferred it to another peer. You can no longer claim that you have the full issued quantity of the asset under your control as everyone who has seen the message would know that you are lying. Instead of sending tokens of value which also represent assets, PeerAssets work by referencing the recieving addresses/peers in the messages posted publicly.
-PeerAssets security model works the same as card counting in casino card games. <sup><a href="https://en.wikipedia.org/wiki/Card_counting">9</a></sup>If you know the size and type of the card deck and you have those two queens in your hand, you are sure that the other guy is lying if he claims that he has three. Each time an asset is created, a new deck (of cards) is spawned and every transaction of a card (asset) is visible to all interested parties, so everyone can keep count of the cards in the deck.</p>
+PeerAssets security model works the same as card counting in casino card games.<sup><a href="https://en.wikipedia.org/wiki/Card_counting">9</a></sup> If you know the size and type of the card deck and you have those two queens in your hand, you are sure that the other guy is lying if he claims that he has three. Each time an asset is created, a new deck (of cards) is spawned and every transaction of a card (asset) is visible to all interested parties, so everyone can keep count of the cards in the deck.</p>
 
 <p>PeerAsset protocol is based on four simple rules:</p>
 
 <ol>
 <li>Math is simple, 2+2 will always equal four (card counting).</li>
 <li>If it is wrong, ignore it (ignore bogus messages).</li>
-<li>Nature of blockchain allows proof-of-timeline security model.</li>
-<li>First come first served, protocol will always favor older message.</li>
+<li>Nature of the blockchain allows proof-of-timeline security model.</li>
+<li>"First come first served", protocol will always favor older message.</li>
 </ol>
 
 <h4>
