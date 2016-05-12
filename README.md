@@ -182,7 +182,7 @@ To be valid, a card transfer must originate from an address which is mentioned i
 
 * Does senders address belong to the deck's timeline?
 * Does sender have more or equal to quantity of the cards that are included in transaction?
-* Incoming quantitiy of cards must be a float non-zero number.
+* Incoming quantitiy of cards must be a decimal non-zero number.
 
 As a consequence of this mechanism, losing control of the address that has PeerAssets assigned means assets become immovable and un-spendable, which confirms that security model of PeerAssets is solid. A card transfer transaction uses same P2TH mechanism to tag it as PeerAssets transaction, however it uses transaction ID of deck spawning transaction to design P2TH address so this address refers to the deck spawning transaction ID. This enables quick and easy verification of the timeline.
 
