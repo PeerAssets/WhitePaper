@@ -258,7 +258,7 @@ Final balance of the issuing address always represents negative balance equal to
 <ul>
 <li>Does senders address belong to the deck's timeline?</li>
 <li>Does sender have more or equal to quantity of the cards that are included in transaction?</li>
-<li>Incoming quantitiy of cards must be a float non-zero number.</li>
+<li>Incoming quantitiy of cards must be a decimal non-zero number.</li>
 </ul>
 
 <p>As a consequence of this mechanism, losing control of the address that has PeerAssets assigned means assets become immovable and un-spendable, which confirms that security model of PeerAssets is solid. A card transfer transaction uses same P2TH mechanism to tag it as PeerAssets transaction, however it uses transaction ID of deck spawning transaction to design P2TH address so this address refers to the deck spawning transaction ID. This enables quick and easy verification of the timeline.</p>
