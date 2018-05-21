@@ -288,3 +288,7 @@ transactions for efficient queryabilitity, 2016
 [14](https://github.com/ppcoin/ppcoin/blob/master/src/kernel.cpp): Peercoin source code - coin age
 
 _______________________________________
+
+# Further reading:
+
+[1](https://medium.com/peercoin/peerassets-deck-issue-modes-c419f38f7800): PeerAssets Deck Issue Modes
